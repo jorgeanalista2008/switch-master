@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+
+            background:steelblue
+        }
+        #switch{visibility: hidden;}
+label {
+    cursor: pointer;
+    display:block;
+    text-indent: -2000px;
+    width: 488px;
+    height: 200px;
+    background: red;
+    border-radius: 200px;
+    position: relative;
+
+}
+label:after{
+    content: 'ON';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 180px;
+    height: 180px;
+    background: white;
+    border-radius: 90px;
+    transition: 0.4s;
+}
+input:checked + label{
+    background: #7ed957;
+}
+input:checked + label::after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+    </style>
+    <title>SWITCH</title>
+</head>
+<body>
+        <input type="checkbox" id ="switch"> 
+        <label for="switch">
+            Toggle
+        </label>
+</body> 
+</html>
